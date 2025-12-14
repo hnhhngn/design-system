@@ -1,25 +1,23 @@
 # Design System – CURRENT
 
-> This file defines the **single active runtime state** of the personal AI-driven Design System.
+> This file defines the **single active runtime state** of the Personal AI Design System.
 >
-> It is the **only authoritative entry point** for both AI and human users to determine which rules, tokens, and features are currently enabled.
+> AI MUST treat this file as the **only authoritative entry point** for deciding what rules, tokens, and features are active.
 
 ---
 
-## Active Versions
+## Active Files
 
-- **Design System Spec:** `design-system-spec-v1.2.md`
-- **AI-ready Contract:** `ai-ready-contract-v1.3.md`
+- **Design System Spec:** `spec.md`
+- **AI-ready Contract:** `contract.md`
 - **Token Runtime:** `base.css`
-
-  - Source: `base.v1.2.css`
 
 ---
 
 ## Enabled Features
 
 - Button Yellow (secondary highlight variant)
-- RGB Effect (Experimental, decorative only)
+- RGB Effect (Experimental, decorative / ambient only)
 
 ---
 
@@ -40,10 +38,8 @@
   - Sidebar
   - Tag
 
-- No core behavior may be modified under Design System v1.x
-
-- All UI must be **token-driven**
-
+- Core behavior MUST NOT be modified under Design System v1.x
+- All UI MUST be **token-driven**
 - `base.css` is **read-only** for AI and applications
 
 ---
@@ -53,7 +49,7 @@
 When generating or modifying UI, AI MUST follow this sequence:
 
 1. Read this file (`CURRENT.md`)
-2. Load the referenced **Design System Spec** and **AI-ready Contract**
+2. Load `spec.md` and `contract.md`
 3. Consume tokens exclusively from `base.css`
 4. Apply only features explicitly listed as **Enabled**
 5. Treat anything not listed here as **not allowed**
@@ -62,17 +58,11 @@ If a required capability is missing, AI MUST stop and ask before proceeding.
 
 ---
 
-## Update Rules
+## Versioning & History
 
-- This file is updated **only when the active Design System state changes**
-- Historical Spec / Contract / token files are never modified
-- Any change in this file represents an **explicit opt-in** to new behavior or visuals
-
----
-
-## Machine-Readable Guarantee
-
-The content of this file is structured so it can be converted **1:1** into a machine-readable `active.json` format **without loss of information**.
+- This repository uses **single-file active state**
+- Historical versions are tracked via **Git tags**, not file names
+- Any change to this file represents an **explicit runtime switch**
 
 ---
 
