@@ -54,11 +54,6 @@
    /* Button – Green (Feature / Success) */
    --button-green-bg: #10b981;
 
-   /* Button – Yellow (Secondary Highlight) */
-   --button-yellow-bg: #facc15;
-   --button-yellow-shadow: 0 6px 0 #ca8a04;
-   --button-yellow-shadow-pressed: 0 4px 0 #ca8a04;
-
    /* ---------------- Tag ---------------- */
    --tag-padding: 0 var(--space-md);
    --tag-radius: 16px;
