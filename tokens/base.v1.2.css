@@ -1,0 +1,31 @@
+/* ==========================================================
+   base.css v1.2 – Additive Update (RGB Effect – Experimental)
+   Status: READ-ONLY (AI Consumer)
+   Extends: base.css v1.1
+   Source of Truth: Design System Spec v1.2
+   ========================================================== */
+
+:root {
+  /* ========================================================
+     ADDITIVE TOKENS – RGB Effect (Experimental)
+     Decorative / Ambient only
+     ======================================================== */
+
+  /* RGB gradient spectrum (soft, continuous) */
+  --rgb-gradient: linear-gradient(
+    90deg,
+    rgba(255, 0, 80, 0.8),
+    rgba(0, 255, 160, 0.8),
+    rgba(0, 120, 255, 0.8)
+  );
+
+  /* Overall opacity for RGB layer */
+  --rgb-opacity: 0.6;
+
+  /* Animation duration (slow, ambient) */
+  --rgb-animation-duration: 12s;
+}
+
+/* ==========================================================
+   End of base.css v1.2 – RGB Effect Tokens
+   ========================================================== */
